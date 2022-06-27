@@ -15,6 +15,10 @@ console.log(JSON.stringify(demoJsonObj));
 // Output
 //{"mission":"CreateJsonStringify","timeToComplete":10,"useExistingFunction":false,"reasons":["Inquisitive","Masochist","Bragging Rights"],"toolsAllowed":{"language":"JavaScript","enhancer":"Coffee","motivation":"Binaural Beats","alternativeMethod":"Youtube - Check out my video tutorial"}}
 
+//Test the string is valid by parsing it back
+console.log(JSON.parse(JSON.stringify(demoJsonObj)));
+
+
 
 function isStr(val){
     return typeof val === 'string';
@@ -84,3 +88,6 @@ function CustomJsonStringify(obj){
 
 
 console.log(CustomJsonStringify(demoJsonObj));
+
+//Pass string into JSON.parse() to check it is valid
+console.log(JSON.parse(CustomJsonStringify(demoJsonObj)));
